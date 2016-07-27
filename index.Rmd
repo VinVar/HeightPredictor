@@ -1,0 +1,61 @@
+---
+title       : Child's Height Predictor
+subtitle    : This is a simple project that demostratates reactive output displayed as a result of server calculations.
+author      : Vineetha Varghese
+job         : 
+framework   : io2012        # {io2012, html5slides, shower, dzslides, ...}
+highlighter : highlight.js  # {highlight.js, prettify, highlight}
+hitheme     : tomorrow      # 
+widgets     : []            # {mathjax, quiz, bootstrap}
+mode        : selfcontained # {standalone, draft}
+knit        : slidify::knit2slides
+---
+
+## Introduction
+
+How tall will my child be? This is a common question asked by parents. Predicting a child's adult height is not 100 percent accurate. Below is a popular formula provided by the Mayo clinic, here the child's height is dependent on the mother's and father's hieght.
+
+1. Add the mother's height and the father's height in inches.
+2. Add 5 inches for boys or subtract 5 inches for girls.
+3. Divide by two.
+
+Most children will reach 4 inches of this estimation.
+
+
+--- .class #id 
+
+## Find your childs height
+
+We provide 3 input fields.
+
+1. A radio button to pick the child's gender, with options Male and Female. The default is set to Male.
+2. A slider to input the father's height with a range of 36 to 100 inches.
+3. A slider to input the mother's height with a range of 36 to 100 inches.
+
+The calcuation is done by adding the mother's and father's height in inches, and then subtracting the child's height by 5 if female and adding by 5 if male.
+
+childHeight <- Dads height + Moms heightt +/- 5) /2
+                
+Average U.S male height is 69.5 and female height is 64 inches.
+
+--- .class #id 
+
+# Average Height of US population by gender
+```{r echo=FALSE}
+library(ggplot2)
+```
+```{r}
+gender <- c("Male", "Female"); height <- c(69.5, 64);df <- data.frame(gender, height)
+ggplot(aes(gender, height), data=df) + geom_bar(stat="identity", width=0.2,aes(fill=gender)) 
+```
+
+
+--- .class #id 
+
+## Conclusion
+
+![app](app.png)
+
+This simple app gives an estimate of your chid's height. It should be within 4 inches of the calculated height.The plote provides you a visusal interpretation of your child's potential height based
+
+Disclaimer: The adult height is dependent on the child's nutrition, excercise and other genetic factors not just the parents height.

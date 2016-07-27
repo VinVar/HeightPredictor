@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Child's Height Predictor</title>
+  <meta charset="utf-8">
+  <meta name="description" content="Child's Height Predictor">
+  <meta name="author" content="Vineetha Varghese">
+  <meta name="generator" content="slidify" />
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta http-equiv="X-UA-Compatible" content="chrome=1">
+  <link rel="stylesheet" href="libraries/frameworks/io2012/css/default.css" media="all" >
+  <link rel="stylesheet" href="libraries/frameworks/io2012/css/phone.css" 
+    media="only screen and (max-device-width: 480px)" >
+  <link rel="stylesheet" href="libraries/frameworks/io2012/css/slidify.css" >
+  <link rel="stylesheet" href="libraries/highlighters/highlight.js/css/tomorrow.css" />
+  <base target="_blank"> <!-- This amazingness opens all links in a new tab. -->  
+  
+  <!-- Grab CDN jQuery, fall back to local if offline -->
+  <script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.7.min.js"></script>
+  <script>window.jQuery || document.write('<script src="libraries/widgets/quiz/js/jquery.js"><\/script>')</script> 
+  <script data-main="libraries/frameworks/io2012/js/slides" 
+    src="libraries/frameworks/io2012/js/require-1.0.8.min.js">
+  </script>
+  
+  
+
+</head>
+<body style="opacity: 0">
+  <slides class="layout-widescreen">
+    
+    <!-- LOGO SLIDE -->
+        <slide class="title-slide segue nobackground">
+  <hgroup class="auto-fadein">
+    <h1>Child's Height Predictor</h1>
+    <h2>This is a simple project that demostratates reactive output displayed as a result of server calculations.</h2>
+    <p>Vineetha Varghese<br/></p>
+  </hgroup>
+  <article></article>  
+</slide>
+    
+
+    <!-- SLIDES -->
+    <slide class="" id="slide-1" style="background:;">
+  <hgroup>
+    <h2>Introduction</h2>
+  </hgroup>
+  <article data-timings="">
+    <p>How tall will my child be? This is a common question asked by parents. Predicting a child&#39;s adult height is not 100 percent accurate. Below is a popular formula provided by the Mayo clinic, here the child&#39;s height is dependent on the mother&#39;s and father&#39;s hieght.</p>
+
+<ol>
+<li>Add the mother&#39;s height and the father&#39;s height in inches.</li>
+<li>Add 5 inches for boys or subtract 5 inches for girls.</li>
+<li>Divide by two.</li>
+</ol>
+
+<p>Most children will reach 4 inches of this estimation.</p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="class" id="id" style="background:;">
+  <hgroup>
+    <h2>Find your childs height</h2>
+  </hgroup>
+  <article data-timings="">
+    <p>We provide 3 input fields.</p>
+
+<ol>
+<li>A radio button to pick the child&#39;s gender, with options Male and Female. The default is set to Male.</li>
+<li>A slider to input the father&#39;s height with a range of 36 to 100 inches.</li>
+<li>A slider to input the mother&#39;s height with a range of 36 to 100 inches.</li>
+</ol>
+
+<p>The calcuation is done by adding the mother&#39;s and father&#39;s height in inches, and then subtracting the child&#39;s height by 5 if female and adding by 5 if male.</p>
+
+<p>childHeight &lt;- Dads height + Moms heightt +/- 5) /2</p>
+
+<p>Average U.S male height is 69.5 and female height is 64 inches.</p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="class" id="id" style="background:;">
+  <hgroup>
+    <h1>Average Height of US population by gender</h1>
+  </hgroup>
+  <article data-timings="">
+    <pre><code class="r">gender &lt;- c(&quot;Male&quot;, &quot;Female&quot;); height &lt;- c(69.5, 64);df &lt;- data.frame(gender, height)
+ggplot(aes(gender, height), data=df) + geom_bar(stat=&quot;identity&quot;, width=0.2,aes(fill=gender)) 
+</code></pre>
+
+<p><img src="assets/fig/unnamed-chunk-2-1.png" alt="plot of chunk unnamed-chunk-2"></p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="class" id="id" style="background:;">
+  <hgroup>
+    <h2>Conclusion</h2>
+  </hgroup>
+  <article data-timings="">
+    <p><img src="app.png" alt="app"></p>
+
+<p>This simple app gives an estimate of your chid&#39;s height. It should be within 4 inches of the calculated height.The plote provides you a visusal interpretation of your child&#39;s potential height based</p>
+
+<p>Disclaimer: The adult height is dependent on the child&#39;s nutrition, excercise and other genetic factors not just the parents height.</p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+    <slide class="backdrop"></slide>
+  </slides>
+  <div class="pagination pagination-small" id='io2012-ptoc' style="display:none;">
+    <ul>
+      <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=1 title='Introduction'>
+         1
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=2 title='Find your childs height'>
+         2
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=3 title='Average Height of US population by gender'>
+         3
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=4 title='Conclusion'>
+         4
+      </a>
+    </li>
+  </ul>
+  </div>  <!--[if IE]>
+    <script 
+      src="http://ajax.googleapis.com/ajax/libs/chrome-frame/1/CFInstall.min.js">  
+    </script>
+    <script>CFInstall.check({mode: 'overlay'});</script>
+  <![endif]-->
+</body>
+  <!-- Load Javascripts for Widgets -->
+  
+  <!-- LOAD HIGHLIGHTER JS FILES -->
+  <script src="libraries/highlighters/highlight.js/highlight.pack.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script>
+  <!-- DONE LOADING HIGHLIGHTER JS FILES -->
+   
+  </html>
