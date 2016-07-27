@@ -32,8 +32,8 @@
         <slide class="title-slide segue nobackground">
   <hgroup class="auto-fadein">
     <h1>Child's Height Predictor</h1>
-    <h2>This is a simple project that demostratates reactive output displayed as a result of server calculations.</h2>
-    <p>Vineetha Varghese<br/></p>
+    <h2>This is a simple project that calculates a childs height based on the parents height.</h2>
+    <p>Vineetha Varghese<br/>Use arrow keys to move accross pages</p>
   </hgroup>
   <article></article>  
 </slide>
@@ -74,7 +74,7 @@
 
 <p>The calcuation is done by adding the mother&#39;s and father&#39;s height in inches, and then subtracting the child&#39;s height by 5 if female and adding by 5 if male.</p>
 
-<p>childHeight &lt;- Dads height + Moms heightt +/- 5) /2</p>
+<p>childHeight = (Dads height + Moms heightt +/- 5) /2</p>
 
 <p>Average U.S male height is 69.5 and female height is 64 inches.</p>
 
@@ -104,7 +104,7 @@ ggplot(aes(gender, height), data=df) + geom_bar(stat=&quot;identity&quot;, width
   <article data-timings="">
     <p><img src="app.png" alt="app"></p>
 
-<p>This simple app gives an estimate of your chid&#39;s height. It should be within 4 inches of the calculated height.The plote provides you a visusal interpretation of your child&#39;s potential height based</p>
+<p>This simple app gives an estimate of your chid&#39;s height. It should be within 4 inches of the calculated height.The plot provides you a visual interpretation of your child&#39;s potential height with respect to the current US population. Code for this app can be found at: <a href="https://github.com/VinVar/HeightPredictor">https://github.com/VinVar/HeightPredictor</a></p>
 
 <p>Disclaimer: The adult height is dependent on the child&#39;s nutrition, excercise and other genetic factors not just the parents height.</p>
 

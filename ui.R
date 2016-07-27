@@ -32,9 +32,13 @@ shinyUI(pageWithSidebar(
                                      ("You will see the calculated predicted height. 
                                       Also on the chart you will find a blue line that
                                       that shows where your childs predicted height 
-                                      falls with respect to the U.S Population.")
+                                      falls with respect to the U.S Population."),
+                             helpText(   a("Click Here for detailed code",     
+                                         href="https://github.com/VinVar/HeightPredictor",
+                                         target="_blank")
+                                             )
                                      
-                                     )
+                             )
                 )
         ),
         mainPanel(

@@ -2,8 +2,8 @@ name: heightPredictor
 account: vinvar
 server: shinyapps.io
 appId: 117004
-bundleId: 517191
+bundleId: 517465
 url: https://vinvar.shinyapps.io/heightPredictor/
-when: 1469645519.58444
+when: 1469661152.32676
 asMultiple: FALSE
 asStatic: FALSE
